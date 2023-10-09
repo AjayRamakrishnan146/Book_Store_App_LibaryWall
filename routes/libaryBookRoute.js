@@ -365,7 +365,7 @@ router.get('/viewallbooks', async (req, res) => {
     const allBooks = await libaryBookSchema.find();
     const allBooksInfo = allBooks.map((book) => ({
       _id: book._id,
-      // imageName: book.image.data ? book.image.data.toString('base64') : '',
+      imageName: book.image.data ? book.image.data.toString('base64') : '',
       bookName: book.book,
       author: book.author,
       genre: book.genre,
